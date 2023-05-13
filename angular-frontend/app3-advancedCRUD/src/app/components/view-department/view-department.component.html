@@ -1,0 +1,18 @@
+<div class="container mt-3 col-6">
+  <table class="table table-striped text-center" style="margin: 20px">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>JobRole</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dep of dep" class="align-middle">
+        <td>{{ dep.id }}</td>
+        <td>{{ dep.name }}</td>
+        <td>{{ dep.jobRole }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

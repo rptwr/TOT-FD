@@ -1,0 +1,29 @@
+<div class="container">
+  <h2 class="text-center">Users List</h2>
+  <div class="card">
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <th>Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.email }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- This code is an Angular template that defines an HTML table that displays user data. The *ngFor directive is used to loop through the users array and generate table rows for each user.
+
+For each user in the users array, the td elements display the values of the id, firstName, lastName, and email properties of the User object.
+
+*ngFor is an Angular structural directive that allows us to loop over a collection of items and generate HTML markup for each item. In this case, it is used with the users array to generate a table row for each user in the array. -->

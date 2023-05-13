@@ -1,0 +1,76 @@
+<br />
+<button
+  type="button"
+  (click)="gotoUpdateSkill()"
+  class="btn btn-success"
+  style="float: right"
+>
+  Update skills
+</button>
+<div class="col-md-6 offset-md-3">
+  <h3>Update Employee</h3>
+  <form #update="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>First Name</label>
+      <input
+        class="form-control"
+        [(ngModel)]="employee.firstName"
+        type="text"
+        name="firstName"
+      />
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input
+        class="form-control"
+        [(ngModel)]="employee.lastName"
+        type="text"
+        name="employee.lastName"
+      />
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        class="form-control"
+        [(ngModel)]="employee.email"
+        type="text"
+        name="employee.email"
+      />
+    </div>
+
+    <div>
+      <div class="form-group">
+        <label>Department Name</label>
+        <input
+          class="form-control"
+          [(ngModel)]="employee.dep.name"
+          type="test"
+          name="depname"
+        />
+      </div>
+      <div class="form-group">
+        <label>jobRole</label>
+        <input
+          class="form-control"
+          [(ngModel)]="employee.dep.jobRole"
+          type="test"
+          name="depjobRole"
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>salary</label>
+      <input
+        class="form-control"
+        [(ngModel)]="employee.salary.salary"
+        type="number"
+        name="Salary"
+      />
+    </div>
+
+    <br />
+    <div class="form-group" align-items>
+      <button type="submit" class="btn btn-success">Update</button>
+    </div>
+  </form>
+</div>
