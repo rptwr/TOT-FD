@@ -1,0 +1,62 @@
+<h3 style="text-align: center">Employee Details</h3>
+<div class="card" style="margin: 20px">
+  <div class="card-body" style="margin-left: 50px">
+    <div class="form-group">
+      <label><b>ID:&nbsp;</b></label
+      >{{ employee.id }}
+    </div>
+    <div class="form-group">
+      <label><b>First Name:&nbsp; </b></label>{{ employee.firstName }}
+    </div>
+    <div class="form-group">
+      <label><b>Last Name: &nbsp;</b></label
+      >{{ employee.lastName }}
+    </div>
+    <div class="form-group">
+      <label><b>Email:&nbsp; </b></label>{{ employee.email }}
+    </div>
+    <div class="form-group">
+      <label><b>Date of Join:&nbsp; </b></label>{{ employee.dateOfJoin }}
+    </div>
+
+    <div class="form-group">
+      <label><b>Department:&nbsp; </b></label>
+      <div class="form-group">
+        <label> Name: &nbsp;</label>{{ employee.dep.name }}
+      </div>
+      <div class="form-group">
+        <label> Job Role:&nbsp; </label>{{ employee.dep.jobRole }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label><b>Salary: &nbsp;</b></label
+      >{{ employee.salary.salary }}
+    </div>
+    <div class="form-group">
+      <label><b>Skills: &nbsp;</b></label>
+      <div class="form-group">
+        <ol class="list-group">
+          <li
+            class="list-group-item col-3"
+            *ngFor="let skill of employee.employeeSkills"
+          >
+            {{ skill.name }}
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="form-group">
+      <label><b>Documents: &nbsp;</b></label>
+      <div class="form-group">
+        <ol class="list-group">
+          <li
+            class="list-group-item col-3"
+            *ngFor="let document of employee.documents"
+          >
+            {{ document.name }}
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

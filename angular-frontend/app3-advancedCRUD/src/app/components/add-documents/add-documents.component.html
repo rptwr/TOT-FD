@@ -1,0 +1,32 @@
+<form (ngSubmit)="submitForm()" class="container mt-3">
+  <div>
+    <div *ngFor="let file of selectedFiles" class="form-group">
+      <div class="input-group mb-3">
+        <div class="custom-file">
+          <input
+            type="file"
+            class="custom-file-input"
+            (change)="onFileChange($event)"
+            accept=".jpg, .png, .pdf"
+          />
+          <label class="custom-file-label">{{ file.name }}</label>
+        </div>
+        <div class="input-group-append">
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="removeFile(file)"
+          >
+            Remove File
+          </button>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="addFile()">
+      Add File
+    </button>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-success">Upload Files</button>
+  </div>
+</form>
